@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../ui/Card";
-import { useLanguage } from "../context/LanguageContext"; // استيراد سياق اللغة
+import { useLanguage } from "../context/LanguageProvider";
 
 export default function Features() {
   const { t } = useLanguage();

@@ -1,17 +1,34 @@
 import React from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Container from "./Container";
 import Button from "../ui/Button";
-import { useLanguage } from "../context/LanguageContext"; // استيراد سياق اللغة
+import { useLanguage } from "../context/LanguageProvider";
 
 export default function Navbar() {
   const { lang, toggleLanguage, t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // دالة للتعامل مع الانتقال للأقسام في الصفحة الرئيسية أو العودة لها أولاً
+  const handleScrollTo = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-800/60 bg-[#0b0c10]/80 backdrop-blur-xl">
       <Container className="flex items-center justify-between h-20">
         
         {/* Logo */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 cursor-pointer" onClick={() => navigate("/")}>
           <img
             src="/logo2.png"
             alt="Equinox"
@@ -19,7 +36,7 @@ export default function Navbar() {
           />
           <div>
             <h1 className="text-white font-black text-xl">
-              EQUINOX
+              Equinox
             </h1>
             <p className="text-xs text-gray-500">
               {lang === 'ar' ? 'بوت ديسكورد' : 'Discord Bot'}
@@ -28,39 +45,47 @@ export default function Navbar() {
         </div>
 
         {/* Links */}
-        <nav className="hidden lg:flex gap-10 text-gray-400 font-medium">
-          <a
-            href="#features"
-            className="hover:text-white transition"
+        <nav className="hidden lg:flex gap-10 text-gray-400 font-medium items-center">
+          <button
+            onClick={() => handleScrollTo("features")}
+            className="hover:text-white transition bg-transparent border-none cursor-pointer"
           >
             {t.nav?.features || "Features"}
-          </a>
-          <a
-            href="#commands"
-            className="hover:text-white transition"
+          </button>
+          <button
+            onClick={() => handleScrollTo("commands")}
+            className="hover:text-white transition bg-transparent border-none cursor-pointer"
           >
             {t.nav?.commands || "Commands"}
-          </a>
-          <a
-            href="#stats"
-            className="hover:text-white transition"
+          </button>
+          <button
+            onClick={() => handleScrollTo("stats")}
+            className="hover:text-white transition bg-transparent border-none cursor-pointer"
           >
             {t.nav?.statistics || "Statistics"}
-          </a>
-          <a
-            href="#faq"
-            className="hover:text-white transition"
+          </button>
+          
+          {/* رابط البريميوم */}
+          <Link
+            to="/premium"
+            className="hover:text-amber-400 transition text-amber-500 font-semibold flex items-center gap-1"
+          >
+            ✨ {t.nav?.premium || "Premium"}
+          </Link>
+
+          <button
+            onClick={() => handleScrollTo("faq")}
+            className="hover:text-white transition bg-transparent border-none cursor-pointer"
           >
             {t.nav?.faq || "FAQ"}
-          </a>
+          </button>
         </nav>
 
         {/* Actions (Language Switcher & Add Bot Button) */}
         <div className="flex items-center gap-4">
-          {/* زر تبديل اللغة */}
           <button
             onClick={toggleLanguage}
-            className="px-3 py-2 rounded-xl bg-gray-800/80 border border-gray-700 hover:bg-gray-700 transition text-xs font-bold text-white"
+            className="px-3 py-2 rounded-xl bg-gray-800/80 border border-gray-700 hover:bg-gray-700 transition text-xs font-bold text-white cursor-pointer"
           >
             {lang === 'en' ? 'العربية 🇸🇦' : 'English 🇺🇸'}
           </button>

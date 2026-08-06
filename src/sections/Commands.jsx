@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CommandCard from "../ui/CommandCard";
 import Tabs from "../ui/Tabs";
-import { useLanguage } from "../context/LanguageContext"; // استيراد سياق اللغة
+import { useLanguage } from "../context/LanguageProvider";
 
 export default function Commands() {
   const { t, lang } = useLanguage();

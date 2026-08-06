@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
 
             <h2 className="text-white text-xl font-bold">
-              EQUINOX
+              Equinox
             </h2>
 
             <p className="text-gray-500 mt-2">

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
-import { useLanguage } from "../context/LanguageContext"; // استدعاء سياق اللغة
+import { useLanguage } from "../context/LanguageProvider";
 
 export default function Hero() {
   const { t } = useLanguage(); // جلب النصوص المترجمة بناءً على اللغة الحالية
@@ -21,7 +21,7 @@ export default function Hero() {
             {t.hero.badge}
           </Badge>
 
-          <h1 className="mt-6 text-5xl lg:text-7xl font-black leading-tight text-white">
+          <h1 className="mt-6 text-4xl lg:text-5xl font-black leading-tight text-white">
             {t.hero.title1}
             <br />
             <span className="text-indigo-400">
@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Image */}
         <div className="flex justify-center">
           <img
-            src="/banner.png"
+            src="/about.png"
             alt="Equinox Dashboard"
             className="w-full max-w-2xl rounded-3xl border border-gray-800 shadow-2xl"
           />

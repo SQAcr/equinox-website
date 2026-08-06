@@ -5,6 +5,7 @@ export const translations = {
       commands: "Commands",
       statistics: "Statistics",
       faq: "FAQ",
+      premium: "Premium", // <-- أضف هذه
       addBot: "Add Bot",
     },
     hero: {
@@ -125,7 +126,8 @@ export const translations = {
       items: [
         { q: "Is the bot free?", a: "Yes, most features are free." },
         { q: "Is there a dashboard?", a: "Yes, it will be launched soon." },
-        { q: "Does it support Arabic?", a: "It supports both Arabic and English." }
+        { q: "Does it support Arabic?", a: "It supports both Arabic and English." },
+        { q: "is there premium soon?", a: "yes it does Coming soon..." }
       ]
     }
   },
@@ -135,10 +137,11 @@ export const translations = {
       commands: "الأوامر",
       statistics: "الإحصائيات",
       faq: "الأسئلة الشائعة",
+      premium: "بريميوم", // <-- أضف هذه
       addBot: "أضف البوت",
     },
     hero: {
-      badge: "✨ البوت الأقوى لإدارة سرفرات الديسكورد",
+      badge: "✨ البوت الأقوى لإدارة السيرفرات الديسكورد",
       title1: "ابنِ مجتمع",
       title2: "ديسكورد الخاص بك",
       title3: "مع إيكوينوكس",
@@ -255,7 +258,8 @@ export const translations = {
       items: [
         { q: "هل البوت مجاني؟", a: "نعم، معظم المميزات مجانية." },
         { q: "هل يوجد لوحة تحكم؟", a: "نعم، سيتم إطلاقها قريبًا." },
-        { q: "هل يدعم اللغة العربية؟", a: "يدعم العربية والإنجليزية." }
+        { q: "هل يدعم اللغة العربية؟", a: "يدعم العربية والإنجليزية." },
+        { q: "هل فيه نسخه بريميوم قريبا؟", a: "نعم قريبا.." }
       ]
     }
   }

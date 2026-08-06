@@ -6,7 +6,8 @@ body{
   margin:0;
   background:#0b0c10;
   color:#fff;
-  font-family:Inter,sans-serif;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 150;
 }
 
 *{
