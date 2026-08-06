@@ -3,7 +3,7 @@ export const translations = {
     nav: {
       features: "Features",
       commands: "Commands",
-      statistics: "Statistics",
+    //   statistics: "Statistics",
       faq: "FAQ",
       premium: "Premium", // <-- أضف هذه
       addBot: "Add Bot",
@@ -135,7 +135,7 @@ export const translations = {
     nav: {
       features: "المميزات",
       commands: "الأوامر",
-      statistics: "الإحصائيات",
+    //   statistics: "الإحصائيات",
       faq: "الأسئلة الشائعة",
       premium: "بريميوم", // <-- أضف هذه
       addBot: "أضف البوت",

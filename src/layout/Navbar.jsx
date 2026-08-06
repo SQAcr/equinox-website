@@ -58,12 +58,12 @@ export default function Navbar() {
           >
             {t.nav?.commands || "Commands"}
           </button>
-          <button
+          {/* <button
             onClick={() => handleScrollTo("stats")}
             className="hover:text-white transition bg-transparent border-none cursor-pointer"
           >
             {t.nav?.statistics || "Statistics"}
-          </button>
+          </button> */}
           
           {/* رابط البريميوم */}
           <Link
