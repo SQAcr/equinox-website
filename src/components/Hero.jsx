@@ -3,7 +3,7 @@ import React from 'react';
 export default function Hero() {
   return (
     <header className="relative overflow-hidden pt-20 pb-12 px-6 text-center lg:pt-24 lg:pb-16 bg-[#0b0c10]">
-      {/* الخلفية المتدرجة (بدل مساحة البياض الكبيرة) */}
+      {/* الخلفية المتدرجة */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-40">
         <div className="w-[600px] h-[600px] bg-indigo-950/30 rounded-full blur-[150px]"></div>
         <div className="w-[500px] h-[500px] bg-purple-950/30 rounded-full blur-[150px]"></div>
@@ -46,14 +46,13 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* معاينة البانر - هنا التعديل الأساسي للحجم والشكل */}
-        <div className="pt-16 px-4 md:px-8">
+        {/* معاينة البانر بحجم مضغوط ومتناسق */}
+        <div className="pt-12 flex justify-center">
           <img
             src="/banner.png"
             alt="Equinox Bot Dashboard Preview"
-            className="rounded-3xl border-4 border-gray-800 shadow-[0_0_80px_-15px_rgba(99,102,241,0.3)] mx-auto w-full max-w-5xl object-cover aspect-[16/9] block"
+            className="rounded-2xl border border-gray-800 shadow-2xl w-full max-w-2xl object-cover"
           />
-          <div className="h-16 -mt-16 bg-gradient-to-t from-[#0b0c10] to-transparent relative z-10"></div>
         </div>
       </div>
     </header>
