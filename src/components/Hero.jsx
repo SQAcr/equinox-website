@@ -1,5 +1,4 @@
 import React from 'react';
-import bannerImg from '../public/banner.png'; // عدل المسار حسب موقع الصورة الفعلي لديك
 
 export default function Hero() {
     return (
@@ -50,7 +49,7 @@ export default function Hero() {
                 {/* معاينة البانر بالحجم الثابت والمرتب */}
                 <div className="pt-12 flex justify-center">
                     <img
-                        src={bannerImg}
+                        src="/banner.png"
                         alt="Equinox Bot Dashboard Preview"
                         className="rounded-2xl border border-gray-800 shadow-2xl w-full max-w-xl h-64 object-cover"
                     />
