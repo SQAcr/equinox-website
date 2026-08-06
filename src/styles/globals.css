@@ -1,0 +1,23 @@
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#0b0c10;
+  color:#fff;
+  font-family:Inter,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+a{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}

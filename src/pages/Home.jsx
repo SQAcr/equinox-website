@@ -1,12 +1,14 @@
-import React from 'react';
-import Hero from '../components/Hero';
-import Features from '../components/Features';
+import React from "react";
+import Hero from "../sections/Hero";
+import Features from "../sections/Features";
+import Commands from "../sections/Commands";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <Features />
-    </div>
+      <Commands />
+    </>
   );
 }
