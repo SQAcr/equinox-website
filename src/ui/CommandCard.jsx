@@ -1,26 +1,26 @@
 import React from "react";
-import Card from "./Card";
 
 export default function CommandCard({ command }) {
-
+  // إذا كان الـ command عبارة عن كائن يحتوي على name و description
+  if (typeof command === "object" && command !== null) {
     return (
-
-        <Card className="p-4 hover:border-indigo-500 transition">
-
-            <div className="flex items-center justify-between">
-
-                <code className="text-indigo-400 font-semibold">
-                    {command}
-                </code>
-
-                <span className="text-gray-500">
-                    /
-                </span>
-
-            </div>
-
-        </Card>
-
+      <div className="rounded-2xl border border-gray-800 bg-[#151822] p-6 text-start">
+        <h3 className="text-indigo-400 font-mono font-bold text-lg">
+          {command.name}
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          {command.description}
+        </p>
+      </div>
     );
+  }
 
+  // إذا كان مجرد نص عادي (للتوافق القديم)
+  return (
+    <div className="rounded-2xl border border-gray-800 bg-[#151822] p-6 text-start">
+      <span className="text-indigo-400 font-mono font-bold text-lg">
+        {command}
+      </span>
+    </div>
+  );
 }

@@ -16,7 +16,7 @@ export default function Footer() {
             </h2>
 
             <p className="text-gray-500 mt-2">
-              Premium Discord Management Bot
+               Discord Management Bot
             </p>
 
           </div>
