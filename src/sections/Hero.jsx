@@ -40,24 +40,26 @@ export default function Hero() {
                             {t.hero.addToDiscord}
                         </Button>
 
-                    <Button
-                        href="#commands"
-                        variant="secondary"
-                    >
-                        {t.hero.viewCommands}
-                    </Button>
+                        <Button
+                            href="#commands"
+                            variant="secondary"
+                        >
+                            {t.hero.viewCommands}
+                        </Button>
+                    </div>
+                </div>
+
+                {/* Image */}
+                <div className="flex justify-center">
+                    <div className="w-full max-w-xl overflow-hidden rounded-3xl border border-gray-800 shadow-2xl bg-gray-900">
+                        <img
+                            src="/about.png"
+                            alt="Equinox Dashboard"
+                            className="w-full h-auto max-h-[350px] object-cover block mx-auto"
+                        />
+                    </div>
                 </div>
             </div>
-
-            {/* Image */}
-            <div className="flex justify-center">
-                <img
-                    src="/about.png"
-                    alt="Equinox Dashboard"
-                    className="w-full max-w-2xl rounded-3xl border border-gray-800 shadow-2xl"
-                />
-            </div>
-        </div>
-    </section >
-  );
+        </section >
+    );
 }
